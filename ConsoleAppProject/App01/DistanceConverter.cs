@@ -16,7 +16,7 @@ namespace ConsoleAppProject.App01
 
     /// Mohammed Loqman
 
-    /// </author>
+    /// </Me>
 
     public class DistanceConverter
 
