@@ -21,11 +21,6 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
 
     {
-
-        private double inputvalue;
-
-
-
         private double outputvalue;
 
 

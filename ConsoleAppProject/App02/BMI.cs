@@ -18,7 +18,7 @@ namespace ConsoleAppProject.App01
 
     /// </Me>
 
-    public class DistanceConverter
+    public class BMI Converter : BMIConverterBase
 
     {
 
@@ -44,7 +44,7 @@ namespace ConsoleAppProject.App01
 
         /// <summary>
 
-        /// This will run the distance converter
+        /// This will run the BMI Convertor
 
         /// </summary>
 
@@ -54,18 +54,23 @@ namespace ConsoleAppProject.App01
 
             OutputHeading();
 
-            InputUnits();
+            Inputheight();
 
-            InputLength();
+            InputWeight();
 
-            ConvertToMeters();
+            ConvertToFeet();
 
-            ConvertFromMeters();
+            ConvertFromStones();
 
-            OutputLength();
+            OutputStones();
 
 
 
+        }
+
+        private void ConvertFromStones()
+        {
+            throw new NotImplementedException();
         }
 
 
@@ -76,13 +81,13 @@ namespace ConsoleAppProject.App01
 
         /// </summary>
 
-        private void OutputHeading()
+        private void BMIconvertor()
 
         {
 
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
-
-            Console.WriteLine("          App02 BMI Cnvertor         ");
+                
+            Console.WriteLine("          App02 BMI Cnvertor               ");
 
             Console.WriteLine("            By Mohammed Loqman             ");
 
@@ -92,9 +97,9 @@ namespace ConsoleAppProject.App01
 
             Console.WriteLine("      Weight, Stones, Pounds,");
 
-            Console.WriteLine("            Kilograms,Height"
+            Console.WriteLine("            Kilograms,Height");
 
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++);
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
 
         }
 
@@ -106,37 +111,27 @@ namespace ConsoleAppProject.App01
 
         /// </summary>
 
-        private void InputUnits()
+        private void InputHeight()
 
         {
 
-            Console.Write(" enter the Matrix you want to convert from");
+            Console.Write(" enter the Height you want to convert from");
 
             iI = Console.ReadLine();
             
-            Console.Write(" enter the matrix want to convert to> ");
+            Console.Write(" enter the Unit want to convert to> ");
 
             O = Console.ReadLine();
 
         }
 
-
-
-        /// <summary>
-
-        /// User inputs weight will be used 
-
-        /// </summary>
-
-        private void InputWeight();
-
-        {
-
-            Console.Write(" enter " + iI + " to Convert to " + O + " NOW > ");
+        Console.Write(" enter " + iI + " to Convert to " + O + " NOW > ");
 
             string value = Console.ReadLine();
 
-            if (Double.TryParse(value, out I))
+            if private string iI;
+
+        (Double.TryParse(value, out I))
 
             {
 
@@ -165,102 +160,17 @@ namespace ConsoleAppProject.App01
             }
 
         }
+         /// <summary>
 
-
-
-        /// <summary>
-
-        /// This converts unit to meters
+        /// Converts units from matrix
 
         /// </summary>
 
-        private void ConvertToMeters()
+        private void ConvertFromMatrix()
 
         {
 
-            ///meters to meters
-
-            if (iI.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I;
-
-            }
-
-            ///meters to feet
-
-            else if (iI.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I * 0.3048;
-
-            }
-
-            ///meters to kilometers
-
-            else if (iI.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I * 1000;
-
-            }
-
-            ///meters to miles
-
-            else if (iI.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I * 1609.35;
-
-            }
-
-            ///meters to inches
-
-            else if (iI.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I * 0.0254;
-
-            }
-
-            ///meters to nanometers
-
-            else if (iI.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
-
-            {
-
-                middleLength = I * 0.000000001;
-
-            }
-
-            else
-
-            {
-
-                O = 0;
-
-            }
-
-        }
-
-
-
-        /// <summary>
-
-        /// Converts units from meters
-
-        /// </summary>
-
-        private void ConvertFromMeters()
-
-        {
-
-            ///meters to feet
+            ///Stone to feet
 
             if (O.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
 
@@ -270,9 +180,9 @@ namespace ConsoleAppProject.App01
 
             }
 
-            ///meters to meters
+            ///Height to Weight
 
-            else if (O.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("Height", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
@@ -280,9 +190,9 @@ namespace ConsoleAppProject.App01
 
             }
 
-            ///meters to kilometers
+            ///Stones to kilograms
 
-            else if (O.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("kilograms", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
@@ -290,9 +200,9 @@ namespace ConsoleAppProject.App01
 
             }
 
-            ///meters to miles
+            ///Stones
 
-            else if (O.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("Stones", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
@@ -300,9 +210,9 @@ namespace ConsoleAppProject.App01
 
             }
 
-            ///meters to inches
+            ///Feet
 
-            else if (O.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("Feet", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
@@ -310,9 +220,9 @@ namespace ConsoleAppProject.App01
 
             }
 
-            ///meters to nanometers
+    ///Height
 
-            else if (O.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+    else if (O.Equals("Height", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
