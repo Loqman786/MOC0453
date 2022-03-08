@@ -22,11 +22,11 @@ namespace ConsoleAppProject.App01
 
     {
 
-        private double inputLength;
+        private double inputvalue;
 
 
 
-        private double outputLength;
+        private double outputvalue;
 
 
 
@@ -34,11 +34,11 @@ namespace ConsoleAppProject.App01
 
 
 
-        private string inputUnit;
+        private string inputvalue;
 
 
 
-        private string outputUnit;
+        private string outputvalue;
 
 
 
@@ -112,11 +112,11 @@ namespace ConsoleAppProject.App01
 
             Console.Write(" enter the units you want to convert from > ");
 
-            inputUnit = Console.ReadLine();
+            iI = Console.ReadLine();
 
             Console.Write(" enter the units you want to convert to > ");
 
-            outputUnit = Console.ReadLine();
+            O = Console.ReadLine();
 
         }
 
@@ -132,17 +132,17 @@ namespace ConsoleAppProject.App01
 
         {
 
-            Console.Write(" enter " + inputUnit + " to Convert to " + outputUnit + " NOW > ");
+            Console.Write(" enter " + iI + " to Convert to " + O + " NOW > ");
 
             string value = Console.ReadLine();
 
-            if (Double.TryParse(value, out inputLength))
+            if (Double.TryParse(value, out I))
 
             {
 
-                inputLength = Convert.ToDouble(value);
+                I = Convert.ToDouble(value);
 
-                if (inputLength < 0)
+                if (I < 0)
 
                 {
 
@@ -180,61 +180,61 @@ namespace ConsoleAppProject.App01
 
             ///meters to meters
 
-            if (inputUnit.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
+            if (iI.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength;
+                middleLength = I;
 
             }
 
             ///meters to feet
 
-            else if (inputUnit.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
+            else if (iI.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength * 0.3048;
+                middleLength = I * 0.3048;
 
             }
 
             ///meters to kilometers
 
-            else if (inputUnit.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
+            else if (iI.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength * 1000;
+                middleLength = I * 1000;
 
             }
 
             ///meters to miles
 
-            else if (inputUnit.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
+            else if (iI.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength * 1609.35;
+                middleLength = I * 1609.35;
 
             }
 
             ///meters to inches
 
-            else if (inputUnit.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
+            else if (iI.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength * 0.0254;
+                middleLength = I * 0.0254;
 
             }
 
             ///meters to nanometers
 
-            else if (inputUnit.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+            else if (iI.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                middleLength = inputLength * 0.000000001;
+                middleLength = I * 0.000000001;
 
             }
 
@@ -242,7 +242,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                outputLength = 0;
+                O = 0;
 
             }
 
@@ -262,61 +262,61 @@ namespace ConsoleAppProject.App01
 
             ///meters to feet
 
-            if (outputUnit.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
+            if (O.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength * 3.280839895;
+                O = middleLength * 3.280839895;
 
             }
 
             ///meters to meters
 
-            else if (outputUnit.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength;
+                O = middleLength;
 
             }
 
             ///meters to kilometers
 
-            else if (outputUnit.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength * 0.001;
+                O = middleLength * 0.001;
 
             }
 
             ///meters to miles
 
-            else if (outputUnit.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength * 0.0006213689;
+                O = middleLength * 0.0006213689;
 
             }
 
             ///meters to inches
 
-            else if (outputUnit.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength * 39.37007874;
+                O = middleLength * 39.37007874;
 
             }
 
             ///meters to nanometers
 
-            else if (outputUnit.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+            else if (O.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
 
             {
 
-                outputLength = middleLength * 1000000000;
+                O = middleLength * 1000000000;
 
             }
 
@@ -334,7 +334,7 @@ namespace ConsoleAppProject.App01
 
         {
 
-            if (outputLength == 0 && inputLength != 0)
+            if (O == 0 && I != 0)
 
             {
 
@@ -350,7 +350,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                Console.WriteLine(" " + inputLength + " " + inputUnit + " is " + outputLength + " " + outputUnit);
+                Console.WriteLine(" " + I + " " + iI + " is " + O + " " + O);
 
             }
 
