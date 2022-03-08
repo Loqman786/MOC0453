@@ -18,22 +18,19 @@ namespace ConsoleAppProject.App01
 
     /// </Me>
 
-    public class DistanceConverter
+    public class DistanceConverter : DistanceConverterBase1
 
     {
-        private double outputvalue;
-
-
-
+        private const int V = 0;
         private double middleLength;
 
 
 
         private string inputvalue;
+        private string iI;
+        private double I;
 
-
-
-        private string outputvalue;
+        public string O { get; private set; }
 
 
 
@@ -53,11 +50,11 @@ namespace ConsoleAppProject.App01
 
             InputLength();
 
-            ConvertToMeters();
+            ConvertToMeters(V);
 
-            ConvertFromMeters();
+            ConvertFromMeters(GetMiddleLength());
 
-            OutputLength();
+            OutputLength(GetO());
 
            
 
@@ -169,7 +166,7 @@ namespace ConsoleAppProject.App01
 
         /// </summary>
 
-        private void ConvertToMeters()
+        private void ConvertToMeters(string v)
 
         {
 
@@ -237,10 +234,15 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = 0;
+                O = v;
 
             }
 
+        }
+
+        private double GetMiddleLength()
+        {
+            return middleLength;
         }
 
 
@@ -251,7 +253,7 @@ namespace ConsoleAppProject.App01
 
         /// </summary>
 
-        private void ConvertFromMeters()
+        private void ConvertFromMeters(double middleLength)
 
         {
 
@@ -317,6 +319,11 @@ namespace ConsoleAppProject.App01
 
         }
 
+        private string GetO()
+        {
+            return O;
+        }
+
 
 
         /// <summary>
@@ -325,11 +332,11 @@ namespace ConsoleAppProject.App01
 
         /// </summary>
 
-        private void OutputLength()
+        private void OutputLength(string o)
 
         {
 
-            if (O == 0 && I != 0)
+            if (o == 0 && I != 0)
 
             {
 
@@ -337,7 +344,7 @@ namespace ConsoleAppProject.App01
 
                 InputUnits();
 
-                OutputLength();
+                OutputLength(GetO());
 
             }
 

@@ -1,6 +1,6 @@
-﻿namespace ConsoleAppProject.App01
+﻿namespace ConsoleAppProject.App02
 {
-    public class DistanceConverterBase : DistanceConverterBaseBase
+    public class BMUconverter : BMIConverterBaseBase
     {
     }
 }

@@ -15,3 +15,17 @@ namespace ConsoleAppProject.App01
         Miles
     }
 }
+namespace ConsoleAppProject.App02
+{
+    public enum BMIUnits
+    {
+        [Display(Name = "No BMI")]
+        Feet,
+        Stone,
+        Height,
+        Weight,
+    }
+
+}
+
+

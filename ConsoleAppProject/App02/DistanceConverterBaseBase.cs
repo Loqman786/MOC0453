@@ -1,20 +1,8 @@
 ﻿namespace ConsoleAppProject.App01
 {
-    public class DistanceConverterBaseBase
+    public class DistanceConverterBaseBase : DistanceConverterBaseBaseBase
     {
 
         private double inputvalue;
-
-
-
-        /// <summary>
-
-        /// User inputs weight will be used 
-
-        /// </summary>
-
-        public void InputWeight();
-
-        {
     }
 }
