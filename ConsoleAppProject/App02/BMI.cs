@@ -1,94 +1,368 @@
-﻿namespace ConsoleAppProject.App02
+﻿using System;
+
+
+
+namespace ConsoleAppProject.App01
+
 {
+
     /// <summary>
-    /// This app will allow student to enter their weight in 
+
+    /// This app does distance conversions between six diffrent units (to and from) being meters, kilometers, nanometers, miles, feet and inches
+
     /// </summary>
+
     /// <author>
-    /// Mohammed Loqman version 0.1
-    /// </author>
-    public class BMI
+
+    /// Mohammed Loqman
+
+    /// </Me>
+
+    public class DistanceConverter
+
     {
-        public const string METRIC = "METRIC";
-        public const string IMPERIAL = "IMPERIAL";
 
-        public double weight;
-        public double height;
+        private double inputvalue;
 
-        public string SelectedUnit;
 
-        public double bmiResult = 0;
 
-        public string[] MenuChoices = { METRIC, IMPERIAL };
+        private double outputvalue;
 
-        public void OutputUnits()
+
+
+        private double middleLength;
+
+
+
+        private string inputvalue;
+
+
+
+        private string outputvalue;
+
+
+
+        /// <summary>
+
+        /// This will run the distance converter
+
+        /// </summary>
+
+        public void Run()
+
         {
-            Console.WriteLine("Please choose between: ");
-            ConsoleHelper.OutputMenu(MenuChoices);
+
+            OutputHeading();
+
+            InputUnits();
+
+            InputLength();
+
+            ConvertToMeters();
+
+            ConvertFromMeters();
+
+            OutputLength();
+
+
+
         }
-        public string GetUnit()
+
+
+
+        /// <summary>
+
+        /// outputs a heading
+
+        /// </summary>
+
+        private void OutputHeading()
+
         {
-            SelectedUnit = System.Console.ReadLine().ToUpper();
-            return SelectedUnit;
+
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
+
+            Console.WriteLine("          App02 BMI Cnvertor         ");
+
+            Console.WriteLine("            By Mohammed Loqman             ");
+
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
+
+            Console.WriteLine(" Which unit do you want to convery (hurry up):");
+
+            Console.WriteLine("      Weight, Stones, Pounds,");
+
+            Console.WriteLine("            Kilograms,Height
+
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
+
         }
 
-        public double GetWeight()
+
+
+        /// <summary>
+
+        /// input units that will be used
+
+        /// </summary>
+
+        private void InputUnits()
+
         {
-            if (SelectedUnit == METRIC)
+
+            Console.Write(" enter the units you want to convert from > ");
+
+            iI = Console.ReadLine();
+
+            Console.Write(" enter the units you want to convert to > ");
+
+            O = Console.ReadLine();
+
+        }
+
+
+
+        /// <summary>
+
+        /// User inputs length that will be used 
+
+        /// </summary>
+
+        private void InputLength()
+
+        {
+
+            Console.Write(" enter " + iI + " to Convert to " + O + " NOW > ");
+
+            string value = Console.ReadLine();
+
+            if (Double.TryParse(value, out I))
+
             {
-                System.Console.WriteLine("Please enter the weight in kgs:");
+
+                I = Convert.ToDouble(value);
+
+                if (I < 0)
+
+                {
+
+                    Console.WriteLine(" enter a correct value ");
+
+                    InputLength();
+
+                }
+
             }
+
             else
+
             {
-                System.Console.WriteLine("enter the weight in Stones:");
-                System.Console.WriteLine("enter the weight in Pounds:");
+
+                Console.WriteLine(" enter a correct value ");
+
+                InputLength();
+
             }
-            weight = System.Convert.ToDouble(System.Console.ReadLine());
-            return weight;
+
         }
 
-        public double GetHeight()
+
+
+        /// <summary>
+
+        /// This converts unit to meters
+
+        /// </summary>
+
+        private void ConvertToMeters()
+
         {
-            if (SelectedUnit == METRIC)
+
+            ///meters to meters
+
+            if (iI.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
+
             {
-                System.Console.WriteLine("Please enter the height in cms:");
+
+                middleLength = I;
+
             }
+
+            ///meters to feet
+
+            else if (iI.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                middleLength = I * 0.3048;
+
+            }
+
+            ///meters to kilometers
+
+            else if (iI.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                middleLength = I * 1000;
+
+            }
+
+            ///meters to miles
+
+            else if (iI.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                middleLength = I * 1609.35;
+
+            }
+
+            ///meters to inches
+
+            else if (iI.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                middleLength = I * 0.0254;
+
+            }
+
+            ///meters to nanometers
+
+            else if (iI.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                middleLength = I * 0.000000001;
+
+            }
+
             else
+
             {
-                System.Console.WriteLine("Please enter the height in Feet:");
-                System.Console.WriteLine("Please enter the height in Inches:");
+
+                O = 0;
+
             }
-            height = System.Convert.ToDouble(System.Console.ReadLine());
-            return height;
+
         }
 
-        public void CalculateBMI()
+
+
+        /// <summary>
+
+        /// Converts units from meters
+
+        /// </summary>
+
+        private void ConvertFromMeters()
+
         {
-            if (SelectedUnit == METRIC)
+
+            ///meters to feet
+
+            if (O.Equals("feet", StringComparison.CurrentCultureIgnoreCase))
+
             {
-                bmiResult = (weight / height / height) * 10000;
+
+                O = middleLength * 3.280839895;
+
             }
-            bmiResult = System.Math.Floor(bmiResult);
+
+            ///meters to meters
+
+            else if (O.Equals("meters", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                O = middleLength;
+
+            }
+
+            ///meters to kilometers
+
+            else if (O.Equals("kilometers", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                O = middleLength * 0.001;
+
+            }
+
+            ///meters to miles
+
+            else if (O.Equals("miles", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                O = middleLength * 0.0006213689;
+
+            }
+
+            ///meters to inches
+
+            else if (O.Equals("inches", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                O = middleLength * 39.37007874;
+
+            }
+
+            ///meters to nanometers
+
+            else if (O.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                O = middleLength * 1000000000;
+
+            }
+
         }
 
-        public string GetBMICategory()
+
+
+        /// <summary>
+
+        /// Gives you the results
+
+        /// </summary>
+
+        private void OutputLength()
+
         {
-            if (bmiResult < 18.5)
-                return "Underweight";
-            else if (bmiResult <= 24.9)
-                return "Normal";
-            else if (bmiResult <= 29.9)
-                return "Overweight";
-            else if (bmiResult <= 34.9)
-                return "Obese";
-            return "35.0...";
+
+            if (O == 0 && I != 0)
+
+            {
+
+                Console.WriteLine("Error Invalid Input");
+
+                InputUnits();
+
+                OutputLength();
+
+            }
+
+            else
+
+            {
+
+                Console.WriteLine(" " + I + " " + iI + " is " + O + " " + O);
+
+            }
+
         }
-
-        public void OutputResult()
-        {
-            System.Console.WriteLine(SelectedUnit + " " + bmiResult + " " + GetBMICategory());
-        }
-
-
 
     }
+
 }
+
+
+
+
+
+
+
