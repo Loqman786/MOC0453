@@ -310,7 +310,15 @@ namespace ConsoleAppProject.App01
 
             }
 
-            
+            ///meters to nanometers
+
+            else if (outputUnit.Equals("nanometers", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+
+                outputLength = middleLength * 1000000000;
+
+            }
 
         }
 
