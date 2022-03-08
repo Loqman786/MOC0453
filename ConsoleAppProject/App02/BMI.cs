@@ -92,9 +92,9 @@ namespace ConsoleAppProject.App01
 
             Console.WriteLine("      Weight, Stones, Pounds,");
 
-            Console.WriteLine("            Kilograms,Height
+            Console.WriteLine("            Kilograms,Height"
 
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++);
 
         }
 
@@ -110,11 +110,11 @@ namespace ConsoleAppProject.App01
 
         {
 
-            Console.Write(" enter the units you want to convert from > ");
+            Console.Write(" enter the Matrix you want to convert from");
 
             iI = Console.ReadLine();
-
-            Console.Write(" enter the units you want to convert to > ");
+            
+            Console.Write(" enter the matrix want to convert to> ");
 
             O = Console.ReadLine();
 
@@ -124,11 +124,11 @@ namespace ConsoleAppProject.App01
 
         /// <summary>
 
-        /// User inputs length that will be used 
+        /// User inputs weight will be used 
 
         /// </summary>
 
-        private void InputLength()
+        private void InputWeight();
 
         {
 
