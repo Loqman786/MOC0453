@@ -23,10 +23,7 @@ namespace ConsoleAppProject.App01
     {
         private const int V = 0;
         private double middleLength;
-
-
-
-        private string inputvalue;
+        private double result;
         private string iI;
         private double I;
 
@@ -50,7 +47,7 @@ namespace ConsoleAppProject.App01
 
             InputLength();
 
-            ConvertToMeters(V);
+            ConvertToMeters(V.ToString());
 
             ConvertFromMeters(GetMiddleLength());
 
@@ -263,7 +260,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength * 3.280839895;
+                result = middleLength * 3.280839895;
 
             }
 
@@ -273,7 +270,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength;
+                result = middleLength;
 
             }
 
@@ -283,7 +280,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength * 0.001;
+                result = middleLength * 0.001;
 
             }
 
@@ -293,7 +290,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength * 0.0006213689;
+                result = middleLength * 0.0006213689;
 
             }
 
@@ -303,7 +300,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength * 39.37007874;
+                result = middleLength * 39.37007874;
 
             }
 
@@ -313,7 +310,7 @@ namespace ConsoleAppProject.App01
 
             {
 
-                O = middleLength * 1000000000;
+                result = middleLength * 1000000000;
 
             }
 
@@ -336,7 +333,7 @@ namespace ConsoleAppProject.App01
 
         {
 
-            if (o == 0 && I != 0)
+            if (result == 0 && I != 0)
 
             {
 

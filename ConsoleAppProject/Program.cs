@@ -22,12 +22,12 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2021-2022! ");
-            Console.WriteLine("        by Mohammed Loqman                        ");
+            Console.WriteLine("              BMI by Mohammed Loqman                        ");
             Console.WriteLine(" =================================================");
             Console.WriteLine();
 
-            App02.BMI converter = new App02.BMI();
-            converter.Run();
+            BMI converter = new BMI();
+            converter.Main();
         }
     }
 }

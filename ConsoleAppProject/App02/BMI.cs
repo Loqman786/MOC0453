@@ -1,30 +1,37 @@
 ﻿using System;
 
 class BMI
-    {
+{
     private double bmi;
     private double weight, height;
-    static void Main(string[] args)
+    public void Main()
     {
-        BMI myBmi = new BMI();
-        myBmi.getDetails();
-        myBmi.calcBMI();
-        myBmi.showBMI();
+        getDetails();
+        calcBMI();
+        showBMI();
     }
-
     private void getDetails()
     {
-        Console.Write("Enter your weight "); 
+        Console.Write("Enter your weight ");
         weight = double.Parse(Console.ReadLine());
 
-        Console.Write("Enter your height "); 
+        Console.Write("Enter your height ");
         height = double.Parse(Console.ReadLine());
+
+    }
+
+    internal void ShowBMI()
+    {
+        throw new NotImplementedException();
     }
 
     private double calcBMI()
     {
-        bmi = weight / height; 
-        return bmi;
+        {
+
+            bmi = weight / ((height / 100) * (height / 100));
+            return bmi;
+        }
     }
 
     private void showBMI()
@@ -36,7 +43,7 @@ class BMI
         }
         else if (bmi > 18.5 && bmi <= 25)
         {
-          Console.Write("Desirable weight for size "); 
+            Console.Write("Desirable weight for size ");
         }
         else if (bmi > 25 && bmi <= 30)
         {
