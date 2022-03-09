@@ -4,6 +4,8 @@ class BMI
 {
     private double bmi;
     private double weight, height;
+    private int result;
+
     public void Main()
     {
         getDetails();
@@ -58,5 +60,18 @@ class BMI
             Console.Write("Severly Obese ");
         }
         Console.ReadLine();
+        if (result == 60 && 100 != 0)
+
+        {
+
+            Console.WriteLine("Error");
+
+        }
+
     }
 }
+
+            
+        
+
+
