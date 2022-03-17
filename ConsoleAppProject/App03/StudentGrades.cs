@@ -29,7 +29,7 @@ namespace ConsoleAppProject.App03
             Students = new string[NUMBEROFSTUDENTS] {
                 "Arbaaz", "Stefan", "Ben",
                 "Ak", "pathker", "Noorzad Gul",
-                "Shoib", "Yusuf", "Custurd cream", "Anees" };
+                "Shoib", "Yusuf", "Zarrar", "Anees" };
             Marks = new int[NUMBEROFSTUDENTS] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
             Grades = new Grades[NUMBEROFSTUDENTS] {App03.Grades.F, App03.Grades.F, App03.Grades.F,
                                                    App03.Grades.D, App03.Grades.C,App03.Grades.B,
@@ -159,7 +159,7 @@ namespace ConsoleAppProject.App03
         {
             foreach (Grades val in Enum.GetValues(typeof(Grades)))
             {
-                Console.WriteLine($"The percentage of students that got {val} is {Gradeprofile[(int)val]}");
+                Console.WriteLine($"The percentage of students that got {val} is {Gradeprofile[(int)val]}%");
             }
         }
 
