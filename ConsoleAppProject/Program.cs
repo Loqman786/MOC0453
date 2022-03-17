@@ -27,7 +27,67 @@ namespace ConsoleAppProject
             Console.WriteLine();
 
             BMI converter = new BMI();
-            converter.Main();
+            DistanceConverter distance=new DistanceConverter();
+            StudentGrades studentGrades = new StudentGrades();
+            Console.WriteLine("Distance Converter (1)");
+            Console.WriteLine("BMI (2)");
+            Console.WriteLine("Student Marks (3)");
+
+            Console.Write(" Use the numbers >");
+
+            string choice = Console.ReadLine();
+
+
+
+            if (Double.TryParse(choice, out double option))
+
+            {
+
+                option = Convert.ToDouble(choice);
+
+                if (option == 1)
+
+                {
+
+                    distance.Run();
+
+                }
+
+                else if (option == 2)
+
+                {
+
+                    converter.Main();
+
+                }
+
+                else if (option == 3)
+
+                {
+
+                    studentGrades.Run();
+
+                }
+
+                else
+
+                {
+
+                    Console.WriteLine("That was not an option");
+
+                }
+
+            }
+
+            else
+
+            {
+
+                Console.WriteLine(" pick number to pick your choice ");
+
+            }
+
+
         }
     }
 }
