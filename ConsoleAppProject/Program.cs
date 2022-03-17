@@ -33,7 +33,7 @@ namespace ConsoleAppProject
             Console.WriteLine("BMI (2)");
             Console.WriteLine("Student Marks (3)");
 
-            Console.Write(" Use the numbers >");
+            Console.Write(" Enter the number of the converter you would like to use >");
 
             string choice = Console.ReadLine();
 

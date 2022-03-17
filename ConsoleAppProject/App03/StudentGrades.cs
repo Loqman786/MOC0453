@@ -27,8 +27,8 @@ namespace ConsoleAppProject.App03
         public StudentGrades()
         {
             Students = new string[NUMBEROFSTUDENTS] {
-                "Ash", "Brook", "Charlie",
-                "Devon", "Emery", "Frankie",
+                "Arbaaz", "Stefan", "Ben",
+                "Ak", "pathker", "Frankie",
                 "Grayson", "Hayden", "Indigo", "Jayden" };
             Marks = new int[NUMBEROFSTUDENTS] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
             Grades = new Grades[NUMBEROFSTUDENTS] {App03.Grades.F, App03.Grades.F, App03.Grades.F,

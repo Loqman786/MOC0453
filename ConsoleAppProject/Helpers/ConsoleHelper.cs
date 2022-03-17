@@ -11,7 +11,7 @@ namespace ConsoleAppProject.Helpers
     /// There are methods for outputting a main heading
     /// and a title.
     /// <author>
-    /// Derek Peacock 2021
+    /// Mohammed Loqman
     /// </author>
     /// </summary>
     public static class ConsoleHelper
@@ -84,9 +84,7 @@ namespace ConsoleAppProject.Helpers
 
 
         /// <summary>
-        /// This method will prompt the user to enter a number
-        /// between the min and max values includice.
-        /// 
+        /// This method will prompt the user to enter a number of the converter you would like to use
         /// Error messages will be displayed for an invalid number
         /// or a number outside the min or max values.
         /// The number returned can be cast as an (int/decimal)
@@ -125,11 +123,11 @@ namespace ConsoleAppProject.Helpers
 
             Console.WriteLine("\n ---------------------------------");
             Console.WriteLine($"    {heading}          ");
-            Console.WriteLine("     by Derek Peacock           ");
+            Console.WriteLine("     by Mohammed Loqman          ");
             Console.WriteLine(" ---------------------------------" +
                 "\n");
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Blue;
         }
 
         /// <summary>
