@@ -1,5 +1,7 @@
 ﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using ConsoleAppProject.Helpers;
 using System;
 
@@ -32,6 +34,7 @@ namespace ConsoleAppProject
             Console.WriteLine("Distance Converter (1)");
             Console.WriteLine("BMI (2)");
             Console.WriteLine("Student Marks (3)");
+            Console.WriteLine("Social Network (4)");
 
             Console.Write(" Enter the number of the converter you would like to use >");
 
@@ -67,6 +70,11 @@ namespace ConsoleAppProject
 
                     studentGrades.Run();
 
+                }
+                else if (option == 4)
+                {
+                    SocialNetwork social = new SocialNetwork();
+                    social.DisplayMenu();
                 }
 
                 else
