@@ -34,7 +34,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// User creates a message post which is then added
+        /// User creates a message which is then added to the ConsoleApp
         /// </summary>
         public void PostMessage()
         {
@@ -52,7 +52,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// Useer creates a photo post which is then added
+        /// User creates a photo post which is then added
         /// </summary>
         public void PostPhoto()
         {
@@ -72,16 +72,14 @@ namespace ConsoleAppProject.App04
             photoPost.Display();
         }
 
-        /// <summary>
-        /// Displays all posts
-        /// </summary>
+     
         public void DisplayPosts()
         {
             news.Display();
         }
 
         /// <summary>
-        /// Displays all posts of a user selected author
+        /// Displays all posts of a selected author
         /// </summary>
         public void DisplayAuthorPosts()
         {
@@ -97,7 +95,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// User selects and then deletes a post. The post is selected by its number
+        /// User selects then deletes a post the post is selected by its number that has been displayed
         /// </summary>
         public void DeletePost()
         {
@@ -110,7 +108,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// User adds a comment to a post. The post is selected by the number
+        /// User adds a comment to a post which is proivded with a number of the post.
         /// </summary>
         public void AddComment()
         {
@@ -126,7 +124,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// Adds a like to a post. User selects the post by its number
+        /// Adds a like to a post which is proivded with a number of the post.
         /// </summary>
         public void LikePost()
         {
@@ -140,7 +138,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// Removes a like from a post. User selects which post by its number
+        /// Removes a like from a post which is proivded with a number of the post.
         /// </summary>
         public void UnlikePost()
         {

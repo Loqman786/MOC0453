@@ -40,29 +40,22 @@ namespace ConsoleAppProject.App04
         }
 
 
-        ///<summary>
-        /// Add a post to the news feed.
-        /// 
-        /// @param post  The post to be added.
-        ///</summary>
+       
         public void AddPost(Post post)
         {
             Posts.Add(post);
         }
 
-        ///<summary>
-        /// Show the news feed. Currently: print the news feed details to the
-        /// terminal. (To do: replace this later with display in web browser.)
-        ///</summary>
+     
         public void Display()
         {
-            // display all posts
+            // display all the posts
             foreach (var (item, index) in Posts.Select((value, i) => (value, i)))
             {
                 itemNumber = index + 1;
                 Console.WriteLine($" Post number {itemNumber}");
                 item.Display();
-                Console.WriteLine();   // empty line between posts
+                Console.WriteLine();  
             }
         }
     }
