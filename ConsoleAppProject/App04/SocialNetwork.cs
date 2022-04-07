@@ -79,7 +79,7 @@ namespace ConsoleAppProject.App04
         }
 
         /// <summary>
-        /// Displays all posts of a selected author
+        /// Displays all posts of a selected author on the ConsoleApp
         /// </summary>
         public void DisplayAuthorPosts()
         {
@@ -143,7 +143,7 @@ namespace ConsoleAppProject.App04
         public void UnlikePost()
         {
             DisplayPosts();
-            int number = (int)ConsoleHelper.InputNumber("Enter the post number that you would like to unlike : ", 1, news.Posts.Count);
+            int number = (int)ConsoleHelper.InputNumber("Enter the post number that you would like to Dislike : ", 1, news.Posts.Count);
 
             news.Posts[number - 1].Unlike();
 
